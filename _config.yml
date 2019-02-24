@@ -4,7 +4,7 @@ bio:                'PhD Student at the University of Zurich'
 description:        "Hi! My name is Hauke. I'm a PhD student of Political Science at the University of Zurich." 
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/hauke_licht_image.jpg'
+# logo:               'assets/img/hauke_licht_image.jpg'
 background:         'assets/img/jack_vancet_ze_.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US

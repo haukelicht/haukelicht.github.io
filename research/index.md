@@ -7,8 +7,8 @@ comments: false
 
 # Dissertation research 
 
-In my dissertation project I study the causes and consequences of anti-elite appeals in party politics. 
-On the one hand, I'm interested in the drivers of anti-elite appeals: How does the interplay between demand side factors (e.g., public opinion or voters' party images), supply side factors resulting from the strategic interaction among political parties, and contextual factors (e.g., political events or historical legacies) shape the incentives parties have to employ such appeals?  
+In my dissertation project I study the causes and consequences of anti-elite appeals in the context of electoral competition. 
+On the one hand, I'm interested in the drivers of anti-elite appeals: How does the interplay between demand side factors (e.g., public opinion or voters' party images), supply side factors resulting from the strategic interaction among political parties, and contextual factors (e.g., political events or historical legacies) shape the incentives parties have to employ such appeals?
 On the other hand, I seek to explain how established parties respond to their challengers' use of anti-elite strategies: How do parties being the target of the criticism implicit to such rhetoric respond to them?  
 
 Some of the more specific questions around which I currently wrap my head are:

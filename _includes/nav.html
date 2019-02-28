@@ -11,7 +11,7 @@
 						<p>{{ site.description }}</p>
 					</li>
 					<li><a href="{{ site.url }}/about/"><span class="btn btn-inverse">Learn More</span></a></li>
-					{% if site.email %}<li>
+                    {% if site.email %}<li>
                         <a href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
                     </li>{% endif %}
                     {% if site.twitter %}<li>
@@ -83,22 +83,35 @@
                     {% if site.hackernews %}<li>
                         <a href="https://news.ycombinator.com/user?id={{ site.hackernews }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-hacker-news"></i> Hacker News</a>
                     </li>{% endif %}
+                    {% if site.external-url %}<li>
+                        <a href="{{ site.external-url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-university"></i> Work</a>
+                    </li>{% endif %}
+                    <li> </li>
 				</ul><!-- /.dl-submenu -->
 			</li>
-			<li>
+            {% if site.include-research %}<li>
+                <a href="{{ site.url }}/research/">Research</a>
+            </li>{% endif %}
+            {% if site.include-cv %}<li>
+                <a href="{{ site.url }}/cv/">CV</a>
+            </li>{% endif %}
+			{% if site.include-posts %}<li>
 				<a href="#">Posts</a>
 				<ul class="dl-submenu">
 					<li><a href="{{ site.url }}/posts/">All Posts</a></li>
 					<li><a href="{{ site.url }}/tags/">All Tags</a></li>
 				</ul>
-			</li>
+			</li>{% endif %}
+            {% if site.include-credits %}<li>
+                <a href="{{ site.url }}/credit/">Credits</a>
+            </li>{% endif %}
 			{% for link in site.data.navigation %}
-		    {% if link.url contains 'http' %}
-		        {% assign domain = '' %}
-		        {% else %}
-		        {% assign domain = site.url %}
-		    {% endif %}
-		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a></li>
-		  {% endfor %}
+    		    {% if link.url contains 'http' %}
+    		        {% assign domain = '' %}
+    		        {% else %}
+    		        {% assign domain = site.url %}
+    		    {% endif %}
+    		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a></li>
+	        {% endfor %}
 		</ul><!-- /.dl-menu -->
 	</nav><!-- /.dl-menuwrapper -->

@@ -15,13 +15,15 @@ Some of the more specific questions around which I currently wrap my head are:
 
 - Why employ some parties anti-elite rhetoric as parts of their electoral strategies and others not? 
 - Why is it that particularly parties who are newcomers to a given political arena or positioned on its fringes use these appeals?
-- Is this characteristic behavior of challenger parties related to their frequent use of issue entrepreneurial strategies? 
-- And if so, how and why? 
-- That is, what theoretical explanations hold in the face of empirical rigorous tests?
+- Is this characteristic behavior of challenger parties related to their frequent use of issue entrepreneurial strategies? And if so, how and why? 
+<!-- - That is, what theoretical explanations hold in the face of empirical rigorous tests? -->
 
-Given the comparative nature of the questions mentioned above, it becomes clear that there is a need for valid measurements of the salience of anti-elite appeals the electoral strategies of a large set parties.
+
+<!-- Given the comparative nature of the questions mentioned above, it becomes clear that there is a need for valid measurements of the salience of anti-elite appeals the electoral strategies of a large set parties.
 This poses the challenge to develop a measurement instrument that satisfy the reliability and specifically the scalability needs arising from focusing on a universe of cases with such a large temporal and geographic coverage.
+ -->
 
+<!-- 
 # Measuring populism in textual data 
 
 I work in a joint project with Tarik Abou-Chadi (University of Zurich) and Pablo Barberá (Facebook and London School of Economics) on the further development of such an instrument: 
@@ -30,4 +32,4 @@ Our measurement instrument combines crowd-sourced human annotation of text with 
 Leveraging this mixed-method approach yielded measurements for a set of about 100K tweets and Facebook posts authored by the accounts of parties and party leaders of six Western European countries.
 As we find these first results as very encouraging, we currently work on refining the coding scheme used to annotate the data, and to scale our measurement instrument to a larger set of countries.
 
-My contribution to this project was initially largely methodologically motivated, but has now become a core component of my dissertation research and generally reflects my wider research interests and ambitions.
+My contribution to this project was initially largely methodologically motivated, but has now become a core component of my dissertation research and generally reflects my wider research interests and ambitions. -->

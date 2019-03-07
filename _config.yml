@@ -29,6 +29,7 @@ kramdown:
   toc_levels:       1..6
   enable_coderay:   false
 mathjax:            true
+highlighter:        'pygments'
 sass:
   sass_dir:         _sass
   style:            compressed
@@ -72,7 +73,7 @@ github-url:         haukelicht
 # hackernews:        username
 
 # Gems
-gems:
+plugins:
   - jekyll-mentions
   - jekyll-feed
   - jekyll-sitemap
@@ -82,4 +83,4 @@ jekyll-mentions:
     base_url: https://github.com
 
 # Exclude list
-exclude: [README.md, notes.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+exclude: ['*.Rmd', README.md, notes.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

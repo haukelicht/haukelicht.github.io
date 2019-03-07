@@ -18,10 +18,11 @@ sitemap: false
 @import "site";
 @import "typography";
 @import "elements";
-@import "syntax";
+@import "my_syntax";
 @import "nav";
 @import "vendor/fonts";
 @import "vendor/font-awesome";
 @import "vendor/animate";
 @import "vendor/magnific-popup/magnific-popup";
-@import "print"
+@import "print";
+/* @import "tango"; */

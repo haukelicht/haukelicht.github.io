@@ -18,3 +18,21 @@ bundle exec jekyll serve
 - name posts always in the following format 'YYYY-MM-DD-post-title.md'
 - save new posts in ./_posts/
 - save draft posts with format 'draft-title.md' in ./_drafts/ and call `bundle exec jekyll serve --draft` to enter preview mode 
+
+
+## Code Highlighting
+
+- use Pygment (see https://help.github.com/en/articles/using-syntax-highlighting-on-github-pages, http://pygments.org/, and https://github.com/stephencelis/ghi/issues/221, and https://sachingpta.gitlab.io/_posts/jekyll-pygments-rouge.html):
+    1. run `sudo pip install Pygments` (Python installation)
+    2. run `sudo gem install pygments.rb` (Ruby installation)
+    3. set `pygments: true` in './_config.yml'
+    4. add `gem 'pygments.rb'` to './Gemfile'
+    5. run `bundle install`
+    5. run `bundle exec jekyll serve`
+
+- change color scheme
+    - see https://github.com/richleland/pygments-css for available style sheets (and preview: http://richleland.github.io/pygments-css/)
+    - do
+        1. download CSS style from https://github.com/richleland/pygments-css
+        2. save CSS as .scss file to './_sass'
+        3. add `@import "foo";` to './assets/css/main.css' 

@@ -1,5 +1,10 @@
 _site/
+_drafts/
 vendor/
 .sass-cache/
 .jekyll-metadata
 *.DS_Store
+*.Rproj
+.Rproj.user
+.Rhistory
+.RData

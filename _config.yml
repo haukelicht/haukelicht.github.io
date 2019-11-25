@@ -1,8 +1,8 @@
 # Site
 title:              Hauke Licht
-bio:                'PhD Student of Political Science at the University of Zurich'
+bio:                'Ph.D. Student of Political Science at the University of Zurich'
 interests:          'Interested in models of party competition, quantitative text analysis, machine learning, Bayesian inference, and many more topics ... <br>and an ardent R programmer.'
-description:        "Hi! I'm a PhD student of Political Science at the University of Zurich." 
+description:        "Hi! I'm a Ph.D. student of Political Science at the University of Zurich." 
 reading_time:       false
 # words_per_minute:   200
 logo:               'assets/img/hauke_licht_front_color_narrow_small.jpg'
@@ -18,6 +18,14 @@ include-posts:      true
 include-cv:         true
 include-research:   true
 include-credits:    true
+
+# Header
+header_pages:
+- about/index.md
+- cv/index.md
+- posts/index.md
+- credits/index.md
+
 # Jekyll
 permalink:          /:title/
 markdown:           kramdown

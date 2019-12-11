@@ -23,6 +23,6 @@ I have gained professional experience as a data analyst in the federal election 
 
 <!-- <p> <i class=""></i> PDF version of [my non-academic CV (long)][1]</p>{: .notice} -->
 
-[1]: {{ site.url }}/download/hauke_licht_nonacademic_cv_short.pdf
+[1]: {{ site.url }}/download/hauke_licht_cv.pdf
 [2]: {{ site.url }}/download/hauke_licht_nonacademic_cv_short.pdf
 [3]: {{ site.url }}/download/hauke_licht_nonacademic_cv_long.pdf

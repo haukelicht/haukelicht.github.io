@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome to my website!
+title: Welcome!
 tags: [about, welcome]
 comments: false
 ---

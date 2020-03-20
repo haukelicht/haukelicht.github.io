@@ -21,6 +21,7 @@ bundle exec gem install <plugin>
 ```
 - add `<plugin>` to plugins section of ./_config.yml
 - add `gem '<plugin>'` to ./Gemfile
+- `bundle install`
 
 ## Creating posts
 

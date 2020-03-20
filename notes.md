@@ -13,12 +13,26 @@ bundle exec jekyll serve
     - add link to subpage in _includes/nav.html if desired
     - add a condition in _layouts/home.html if desired
 
+## Add new plugins
+
+- install plugin
+```shell
+bundle exec gem install <plugin>
+```
+- add `<plugin>` to plugins section of ./_config.yml
+- add `gem '<plugin>'` to ./Gemfile
+
 ## Creating posts
 
 - name posts always in the following format 'YYYY-MM-DD-post-title.md'
-- save new posts in ./_posts/
+- save new posts in ./_posts/ 
 - save draft posts with format 'draft-title.md' in ./_drafts/ and call `bundle exec jekyll serve --draft` to enter preview mode 
 
+## Creating Rmd posts
+
+- put R markdown file in _posts/ with kebab-case formatted name '%Y-%m-%d-*'
+- execute `r source('R/build_one.R')
+- see https://bookdown.org/yihui/blogdown/jekyll.html
 
 ## Code Highlighting
 

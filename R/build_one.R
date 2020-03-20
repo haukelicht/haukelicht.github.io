@@ -22,8 +22,8 @@ local({
     # you may want to adapt them to your own website
     knitr::opts_chunk$set(fig.path = sprintf('%s/', gsub('^.+/', '', d)))
     knitr::opts_knit$set(
-      base.dir = '~/Dropbox/Apps/updog/drop/jekyll/',
-      base.url = 'https://db.yihui.name/jekyll/'
+      base.dir = '~/switchdrive/Documents/work/haukelicht.github.io.git/',
+      base.url = 'https://haukelicht.github.io/'
     )
   }
   options(digits = 4)

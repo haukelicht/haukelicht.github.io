@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: "Merging Comparative Manifesto Project and ParlGov cabinet composition data at the party-level"
 author: "Hauke Licht"
 date: "2019-03-07"

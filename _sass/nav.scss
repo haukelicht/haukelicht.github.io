@@ -127,7 +127,7 @@
 		width: 100%;
 		max-width: 400px;
 		overflow-y: auto;
-		max-height: 600px;
+		/*max-height: 600px;*/
 		opacity: 0;
 		pointer-events: none;
 		box-shadow: 0 12px 24px rgba($black,0.4);
@@ -173,11 +173,24 @@ We also hide the submenu link.
 The opened submenu will get the class "dl-subviewopen".
 All this is done for any sub-level being entered.
 */
+/*.dl-menu, {
+	height: 1000px !important;
+}*/
+
 .dl-menu.dl-subview li,
 .dl-menu.dl-subview li.dl-subviewopen > a,
 .dl-menu.dl-subview li.dl-subview > a {
 	display: none;
 }
+.dl-menu.dl-menuopen.dl-subview {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: scroll;
+}
+.dl-menu.dl-menuopen.dl-subview::-webkit-scrollbar {
+	display: none;
+}
+
 .dl-menu.dl-subview li.dl-subview,
 .dl-menu.dl-subview li.dl-subview .dl-submenu,
 .dl-menu.dl-subview li.dl-subviewopen,

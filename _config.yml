@@ -1,8 +1,12 @@
 # Site
 title:              Hauke Licht
-bio:                'Ph.D. Student of Political Science at the University of Zurich'
-interests:          'Interested in models of party competition, quantitative text analysis, machine learning, Bayesian inference, and many more topics ... <br>and an ardent R programmer.'
-description:        "Hi! I'm a Ph.D. student of Political Science at the University of Zurich." 
+position:           'Post-doctoral researcher'
+department:         'Cologne Center for Comparative Politics'
+university:         'University of Cologne'
+# bio:                '<b>Post-doctoral researcher</b><br/><em>Cologne Center of Comparative Politics</em>'
+# interests:          'Interested in models of party competition, quantitative text analysis, machine learning, Bayesian inference, and many more topics ... <br>and an ardent R programmer.'
+interests:          'computational text analysis, party competition,<br/> legislative politics, and democratic representation'
+description:        "Hi! I'm a post-doctoral researcher at the Cologne Center for Comparative Politics, University of Cologne." 
 reading_time:       false
 # words_per_minute:   200
 logo:               'assets/img/hauke_licht_front_color_narrow_small.jpg'
@@ -16,7 +20,7 @@ url:                https://haukelicht.github.io
 # Navigation
 include-posts:      true
 include-cv:         true
-include-research:   true
+include-research:   false
 include-credits:    true
 
 # Header
@@ -53,9 +57,9 @@ sass:
 #   ad-client:
 #   ad-slot:
 # bing-verify:
-external-url:       https://www.ipz.uzh.ch/en/institut/mitarbeitende/staff/licht.html      
-email:              hauke.licht@uzh.ch
-tw:                 hauke_licht
+external-url:       https://cccp.uni-koeln.de/de/team/post-docs/hauke-licht
+email:              hauke.licht@sowi.uni-koeln.de
+twitter:            hauke_licht
 # facebook:           
 github-url:         haukelicht
 # stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link

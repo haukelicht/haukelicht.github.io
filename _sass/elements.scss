@@ -2,74 +2,75 @@
 %btnextend {
 	display: inline-block;
 	border: 1px solid;
-	border-color: rgba($color_mercury,0.5) rgba($color_bon_jour,0.5) $color_mischka;
+	border-color: rgba($mercury,0.5) rgba($bon_jour,0.5) $mischka;
 	border-radius: 3px;
 	text-decoration: none;
 	background: $white;
-	color: $color_shark;
+	color: $shark;
 	&:hover {
-    box-shadow: 0 0 1px 0 rgba($color_shark,0.5);
+    box-shadow: 0 0 1px 0 rgba($shark,0.5);
     color: $lobster;
   }
 }
 .social-btn {
-	padding: 10px;
-	margin: 10px;
+	padding: 5px;
+	margin: 5px;
+  border: 0px;
 	@extend %btnextend;
 }
 .btn {
-	padding: 10px 18px;
+	padding: 10px 20px;
 	@include font-rem(14);
-	margin: 4px auto;
+	margin: 5px auto;
 	@extend %btnextend;
 	&.btn-success {
-      background-color: $success;
+    background-color: $success;
+    color: $white;
+    border-color: $success;
+    &:visited {
       color: $white;
-      border-color: $success;
-      &:visited {
-        color: $white;
-      }
-      &:hover {
-        background-color: $white;
-        color: $success;
-      }
     }
-    &.btn-warning {
-      background-color: $warning;
+    &:hover {
+      background-color: $white;
+      color: $success;
+    }
+  }
+  &.btn-warning {
+    background-color: $warning;
+    color: $white;
+    border-color: $warning;
+    &:visited {
       color: $white;
-      border-color: $warning;
-      &:visited {
-        color: $white;
-      }
-      &:hover {
-        background-color: $white;
-        color: $warning;
-      }
     }
-    &.btn-danger {
-      background-color: $danger;
+    &:hover {
+      background-color: $white;
+      color: $warning;
+    }
+  }
+  &.btn-danger {
+    background-color: $danger;
+    color: $white;
+    border-color: $danger;
+    &:visited {
       color: $white;
-      border-color: $danger;
-      &:visited {
-        color: $white;
-      }
-      &:hover {
-        background-color: $white;
-        color: $danger;
-      }
     }
-    &.btn-info {
-      background-color: $info;
+    &:hover {
+      background-color: $white;
+      color: $danger;
+    }
+  }
+  &.btn-info {
+    background-color: $info;
+    color: $white;
+    border-color: $info;
+    &:visited {
       color: $white;
-      border-color: $info;
-      &:visited {
-        color: $white;
-      }
-      &:hover {
-        background-color: $white;
-        color: $info;
-      }
     }
+    &:hover {
+      background-color: $white;
+      color: $info;
+    }
+  }
 }
 .title .btn {
     margin: 10px;
@@ -81,6 +82,14 @@
         @include font-rem(14);
     }
 }
+.post-list > ul > li.wow {
+  /*border-style: solid;*/
+  /*border-width: 1px;*/
+  /*border-color: red !important;*/
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 1px $mercury;
+  /*background-color: blue;*/
+}
 
 // hr break
 hr {
@@ -88,19 +97,19 @@ hr {
 	height: 1px;
 	opacity: .8;
     margin: 1em 0;
-	background-image: -webkit-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
-	background-image: -moz-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
-	background-image: -ms-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
-	background-image: -o-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
+	background-image: -webkit-linear-gradient(left, $gallery, $stack, $gallery);
+	background-image: -moz-linear-gradient(left, $gallery, $stack, $gallery);
+	background-image: -ms-linear-gradient(left, $gallery, $stack, $gallery);
+	background-image: -o-linear-gradient(left, $gallery, $stack, $gallery);
 	&.hr-line {
 		border: 0;
 		height: 1px;
 		opacity: .15;
 		margin: 1em 0;
-		background-image: -webkit-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
-		background-image: -moz-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
-		background-image: -ms-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
-		background-image: -o-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
+		background-image: -webkit-linear-gradient(left, $gallery, $stack, $gallery);
+		background-image: -moz-linear-gradient(left, $gallery, $stack, $gallery);
+		background-image: -ms-linear-gradient(left, $gallery, $stack, $gallery);
+		background-image: -o-linear-gradient(left, $gallery, $stack, $gallery);
 	}
 }
 
@@ -178,26 +187,26 @@ kbd {
 	padding: 1px 8px;
 	@include font-rem(10);
 	font-weight: bold;
-	color: $color_fuscous_gray;
+	color: $fuscous_gray;
 	vertical-align: middle;
-	background-color: $color_alabaster;
-	border: solid 1px $color_celeste;
-	border-bottom-color: $color_pink_swan;
+	background-color: $alabaster;
+	border: solid 1px $celeste;
+	border-bottom-color: $pink_swan;
 	border-radius: 3px;
-	box-shadow: inset 0 -1px 0 $color_pink_swan;
+	box-shadow: inset 0 -1px 0 $pink_swan;
 }
 
 // go up button
 .goup-container {
     border-radius: 3px !important;
-    border-color: rgba($color_mercury,0.5) rgba($color_bon_jour,0.5) $color_mischka !important;
+    border-color: rgba($mercury,0.5) rgba($bon_jour,0.5) $mischka !important;
     border: 1px solid;
 	@media #{$small} {
 		display: none !important;
 	}
 }
 .goup-arrow {
-    border-color: transparent transparent $color_tuatara !important;
+    border-color: transparent transparent $tuatara !important;
 }
 
 // reading time

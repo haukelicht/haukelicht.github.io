@@ -21,42 +21,42 @@ layout: compress
                     <!-- <a href="{{ site.url }}">
                         <img src="{{ site.logo }}" class="author-photo">
                     </a> -->
-                    <h3 class="title">
-                        <a class="zoombtn" href="{{ site.url }}">
-                        	<p style="font-size:1.5rem;font-weight:300">
-                                <strong>
-                                    {{ site.title }}
-                                </strong>
-                            </p>
-			            </a>
-                    </h3>
+                    <div class="title" id="name" style="font-size:3rem;font-weight:500">
+                        <!-- <a class="zoombtn" href="{{ site.url }}"> -->
+                    	<!-- <p style="font-size:3rem;font-weight:500"> -->
+                            {{ site.title }}
+                        <!-- </p> -->
+			            <!-- </a> -->
+                    </div>
                     <hr class="hr-line">
-                    <h3 class="title">
-                        <a href="{{ site.url }}">
-                        	<p style="font-size:1.1rem;font-weight:300">{{ site.bio }}</p>
-			            </a>
-                    </h3>
+                    <div id="affiliation">
+                    	<p style="font-size:1.1rem; font-weight:400">
+                            <strong>{{ site.position }}</strong>
+                            <br/>
+                            {{ site.department }}
+                        </p>
+                    </div>
                     <p style="font-size:1rem;font-weight:200">
                         {{ site.interests }}
                     </p>
                   <hr class="hr-line">
-                  <h3 class="title">
-                         <!-- <a class="btn zoombtn" href="{{ site.url }}/about">
+                  <div class="title">
+                         <a class="btn zoombtn" href="{{ site.url }}/about">
                          About
-                         </a> -->
+                         </a>
                          <a class="btn zoombtn" href="{{ site.url }}/cv">
                          CV
                          </a>
-                         <a class="btn zoombtn" href="{{ site.url }}/research">
+                         <!-- <a class="btn zoombtn" href="{{ site.url }}/research">
                          Research
-                         </a>
-                         <a class="btn zoombtn" href="{{ site.url }}/posts">
+                         </a> -->
+                         <!-- <a class="btn zoombtn" href="{{ site.url }}/posts">
                          Posts
-                         </a>
+                         </a> -->
                          <!-- <a class="btn zoombtn" href="{{ site.url }}/projects">
                          Projects
                          </a> -->
-                 </h3>
+                 </div>
                  {% include social-links.html %}
             </div>
         </div>

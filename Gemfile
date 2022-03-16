@@ -7,3 +7,4 @@ gem "jekyll-gist"
 gem 'jekyll-mentions'
 gem 'jekyll-feed'
 gem 'pygments.rb'
+# gem 'thin' 

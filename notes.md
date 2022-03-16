@@ -1,4 +1,4 @@
-notes.md
+<!-- notes.md -->
 # Notes 
 
 ## Run your Jekyll site locally:
@@ -7,13 +7,25 @@ notes.md
 bundle exec jekyll serve
 ```
 
-- to add a new subpage 
-    - add folder <subpage>
-    - in this subpage folder, create an index.html document
-    - add link to subpage in _includes/nav.html if desired
-    - add a condition in _layouts/home.html if desired
+If you want to see changes live:
+```shell
+bundle exec jekyll serve --watch
+```
 
-## Creating posts
+## Content
+
+- About page: ./about/index.md
+
+## Add content 
+
+### Add a new subpage 
+
+- add folder <subpage>
+- in this subpage folder, create an index.html document
+- add link to subpage in _includes/nav.html if desired
+- add a condition in _layouts/home.html if desired
+
+### Create a new post
 
 - name posts always in the following format 'YYYY-MM-DD-post-title.md'
 - save new posts in ./_posts/

@@ -33,7 +33,7 @@
 
 // headings
 h3.title a {
-	color: $color_shark;
+	color: $shark;
 	text-decoration: none;
 }
 
@@ -49,11 +49,11 @@ h3.title a {
 		margin: 0 10px;
 		text-decoration: none;
 		background: $white;
-		color: $color_shark;
+		color: $shark;
 		a {
 			@include font-rem(20);
 			text-decoration: none;
-			color: $color_shark;
+			color: $shark;
 			font-weight: bolder;
             &:hover {
                 color: $lobster;
@@ -70,7 +70,7 @@ h3.title a {
 blockquote {
 	font-family:$alt-font;
 	font-style:italic;
-	border-left:8px solid $color_tundora;
+	border-left:8px solid $tundora;
 	padding-left:20px;
 	margin: 0;
 }
@@ -84,24 +84,24 @@ blockquote {
 figcaption {
     padding-top: 10px;
     @include font(14);
-    color: $color_stack;
+    color: $stack;
 }
 
 // links
 a {
-  transition: color .4s;
-  color: $color_shark;
+  transition: color .3s;
   &:link {
-  	color: $color_shark;
+  	color: $tuatara;
+  	font-weight: 500;
   }
   &:visited {
-  	color: $color_tuatara;
+  	color: $tuatara;
   }
   &:hover {
   	color: $lobster;
   }
   &:active {
-  	transition: color .3s;
+  	transition: color .2s;
   	color: $maroon;
   }
 }
@@ -116,8 +116,8 @@ li code,
 p pre,
 li pre {
     @include font(14);
-    background-color: $color_gray;
-    border: 1px solid $color_mischka;
+    background-color: $gray;
+    border: 1px solid $mischka;
     @include rounded(4px);
     margin: 0 2px;
     padding: 0 5px;
@@ -139,8 +139,8 @@ table {
     padding: .5em 1em;
     text-indent: 0;
     @include font-rem(14);
-    background-color: $color_gray;
-    border: 1px solid $color_pink_swan;
+    background-color: $gray;
+    border: 1px solid $pink_swan;
     @include rounded(3px);
 }
 

@@ -85,7 +85,7 @@
 // GRADIENTS
 // --------------------------------------------------
 
-@mixin horizontal($startColor : $color_gallery, $midColor :  $color_stack, $endColor : $color_gallery) {
+@mixin horizontal($startColor : $gallery, $midColor :  $stack, $endColor : $gallery) {
   background-color: $endColor;
   background-image  : -webkit-linear-gradient(left, $startColor, $midColor, $endColor); 			 // Safari 5.1+, Chrome 10+
   background-image  : -moz-linear-gradient(left, $startColor, $midColor, $endColor); 					 // FF 3.6+

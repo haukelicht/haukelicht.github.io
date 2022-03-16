@@ -17,14 +17,17 @@ layout: compress
             <div class="content">
                 <div class="post-title {% if page.feature %} feature {% endif %}">
                     <h1>{{ page.title }}</h1>
-                    <a class="btn zoombtn" href="{{site.url}}">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
+                    <!-- <a class="btn zoombtn" href="{{site.url}}"> -->
+                        <!-- <i class="fa fa-chevron-left"></i> -->
+                    <!-- </a> -->
                 </div>
                 {{ content }}
             </div>
         </div>
-        {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
+        {% if page.comments and site.disqus_shortname %}
+        <!-- /#disqus_thread -->
+        <section id="disqus_thread" class="animated fadeInUp"></section>
+        {% endif %}
     </header>
     {% include scripts.html %}
     {% if site.mathjax == true %}

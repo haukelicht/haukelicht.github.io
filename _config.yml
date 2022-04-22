@@ -89,7 +89,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-twitter-plugin
+  # - jekyll-twitter-plugin
 
 jekyll-mentions:
     base_url: https://github.com

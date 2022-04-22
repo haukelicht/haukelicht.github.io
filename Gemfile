@@ -7,7 +7,7 @@ gem "jekyll-sitemap"
 gem "jekyll-gist"
 gem 'jekyll-mentions'
 gem 'jekyll-feed'
-gem 'jekyll-twitter-plugin'
+# gem 'jekyll-twitter-plugin'
 gem 'pygments.rb'
 # to fix dependabot alerts
 # gem "kramdown", ">= 2.3.1"

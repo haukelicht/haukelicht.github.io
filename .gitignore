@@ -1,4 +1,4 @@
-# _site/
+_site/
 _drafts/
 vendor/
 .sass-cache/
@@ -8,3 +8,5 @@ vendor/
 .Rproj.user
 .Rhistory
 .RData
+.jekyll-cache/
+.ruby-version

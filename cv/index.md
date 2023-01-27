@@ -6,9 +6,9 @@ tags: [CV]
 comments: false
 ---
 
-I have earned my PhD at the [Department of Political Science  of the University of Zurich](https://www.ipz.uzh.ch/en.html), where I was a member of Tarik Abou-Chadi's research group from May 2018 to December 2021.
-Since January 2022, I'm a post-doctoral researcher at the [Cologne Center for Comparative Politics of the University of Cologne](https://cccp.uni-koeln.de/ "Cologne Center for Comparative Politics") in Sven-Oliver Proksch's ERC-funded project [MINORTIYRULE](https://cordis.europa.eu/project/id/101002115/en "ERC: 'Democracy without Majorities: Political Representation under Minority Rule'").
-
+Since January 2022, I'm a post-doctoral researcher at the [Cologne Center for Comparative Politics of the University of Cologne](https://cccp.uni-koeln.de/ "Cologne Center for Comparative Politics") in Professor Sven-Oliver Proksch's ERC-funded project [MINORTIYRULE](https://cordis.europa.eu/project/id/101002115/en "ERC: 'Democracy without Majorities: Political Representation under Minority Rule'").
+I have earned my PhD at the [Department of Political Science of the University of Zurich](https://www.ipz.uzh.ch/en.html), where I was a member of Tarik Abou-Chadi's research group from May 2018 to December 2021.
+During my doctoral studies, I have spent a term as visiting PhD researcher in the [Hertie School's *Data Science Lab*](https://www.hertie-school.org/en/datasciencelab "Hertie School: Data Science Lab") in Berlin and participated in several international conferences, workshops, and summer schools.
 
 Previously, I have studied 
 Political Science and Sociology at the Humboldt University Berlin, 

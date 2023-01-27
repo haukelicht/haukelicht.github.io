@@ -20,6 +20,11 @@
                     <i class="fa fa-fw fa-google-plus-square"></i>
                 </a>
             {% endif %}
+            {% if site.google-scholar %}
+                <a class="social-btn" href="https://scholar.google.com/citations?user={{ site.google-scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+                    <i class="fa fa-fw fa-google"></i>
+                </a>
+            {% endif %}
             {% if site.linkedin %}
                 <a class="social-btn" href="http://linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener noreferrer" title="Linkedin">
                     <i class="fa fa-fw fa-linkedin-square"></i>

@@ -5,7 +5,7 @@ department:         'Cologne Center for Comparative Politics'
 university:         'University of Cologne'
 # bio:                '<b>Post-doctoral researcher</b><br/><em>Cologne Center of Comparative Politics</em>'
 # interests:          'Interested in models of party competition, quantitative text analysis, machine learning, Bayesian inference, and many more topics ... <br>and an ardent R programmer.'
-interests:          'computational text analysis, party competition,<br/> legislative politics, and democratic representation'
+interests:          'computational political science, democratic<br/>representation, political rhetoric, comparative<br/>politics, and multilingual text analysis'
 description:        "Hi! I'm a post-doctoral researcher at the Cologne Center for Comparative Politics, University of Cologne." 
 reading_time:       false
 # words_per_minute:   200
@@ -62,6 +62,7 @@ email:              hauke.licht@wiso.uni-koeln.de
 twitter:            hauke_licht
 # facebook:           
 github-url:         haukelicht
+google-scholar:     GsY81VAAAAAJ
 # stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 # linkedin:          username
 # xing:              username

@@ -6,11 +6,12 @@ tags: [CV]
 comments: false
 ---
 
-Since January 2022, I'm a post-doctoral researcher at the [Cologne Center for Comparative Politics of the University of Cologne](https://cccp.uni-koeln.de/ "Cologne Center for Comparative Politics") in Professor Sven-Oliver Proksch's ERC-funded project [MINORTIYRULE](https://cordis.europa.eu/project/id/101002115/en "ERC: 'Democracy without Majorities: Political Representation under Minority Rule'").
-I have earned my PhD at the [Department of Political Science of the University of Zurich](https://www.ipz.uzh.ch/en.html), where I was a member of Tarik Abou-Chadi's research group from May 2018 to December 2021.
-During my doctoral studies, I have spent a term as visiting PhD researcher in the [Hertie School's *Data Science Lab*](https://www.hertie-school.org/en/datasciencelab "Hertie School: Data Science Lab") in Berlin and participated in several international conferences, workshops, and summer schools.
+I am an Assistant Professor of Computational Political Science at the University of Innsbruck.
+Previously, I worked as a post-doctoral researcher at the [Cologne Center for Comparative Politics of the University of Cologne](https://cccp.uni-koeln.de/ "Cologne Center for Comparative Politics") in Professor Sven-Oliver Proksch's ERC-funded project [MINORTIYRULE](https://cordis.europa.eu/project/id/101002115/en "ERC: 'Democracy without Majorities: Political Representation under Minority Rule'") (01/2022-07/2024).
+I earned my PhD at the [Department of Political Science of the University of Zurich](https://www.ipz.uzh.ch/en.html), where I was a member of Tarik Abou-Chadi's research group (05/2018 - 12/2021).
+As a PhD and post-doctoral researcher, I visited the [Hertie School's *Data Science Lab*](https://www.hertie-school.org/en/datasciencelab "Hertie School: Data Science Lab") in Berlin and the [Law, Economics, and Data Science group](https://lawecondata.ethz.ch/) at the ETH Zurich.
 
-Previously, I have studied 
+I have studied 
 Political Science and Sociology at the Humboldt University Berlin, 
 and 
 International Relations in the a joint master's program

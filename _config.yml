@@ -1,12 +1,11 @@
 # Site
 title:              Hauke Licht
-position:           'Post-doctoral researcher'
-department:         'Cologne Center for Comparative Politics'
-university:         'University of Cologne'
-# bio:                '<b>Post-doctoral researcher</b><br/><em>Cologne Center of Comparative Politics</em>'
-# interests:          'Interested in models of party competition, quantitative text analysis, machine learning, Bayesian inference, and many more topics ... <br>and an ardent R programmer.'
-interests:          'computational political science, democratic<br/>representation, political rhetoric, comparative<br/>politics, and multilingual text analysis'
-description:        "Hi! I'm a post-doctoral researcher at the Cologne Center for Comparative Politics, University of Cologne." 
+position:           'Assistant Professor of Computational Political Science'
+department:         'Department of Political Science and Digital Science Center'
+university:         'University of Innsbruck'
+# bio:                '<b>Assistant Professor of Computational Political Science</b><br/><em>University of Innsbruck</em>'
+interests:          'democratic<br/>representation, political rhetoric, comparative<br/>politics, multilingual text analysis, and NLP'
+description:        "Hi! I'm a Assistant Professor of Computational Political Science at the University of Innsbruck" 
 reading_time:       false
 # words_per_minute:   200
 logo:               'assets/img/hauke_licht_front_color_narrow_small.jpg'
@@ -57,8 +56,8 @@ sass:
 #   ad-client:
 #   ad-slot:
 # bing-verify:
-external-url:       https://cccp.uni-koeln.de/de/team/post-docs/hauke-licht
-email:              hauke.licht@wiso.uni-koeln.de
+external-url:       https://www.uibk.ac.at/de/disc/team/
+email:              hauke.licht@uibk.ac.at
 twitter:            hauke_licht
 # facebook:           
 github-url:         haukelicht

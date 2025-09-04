@@ -9,7 +9,7 @@ I'm Hauke, **_Assistant Professor of Computational Political Science_** at the [
 
 I develop and apply **computational methods** for the comparative study of political communication strategies.
 For example, in a [paper](https://doi.org/10.1017/S0007123424000954) with Ronja Sczepanski (Sciences Po Paris) in the **_British Journal of Political Science_**, we present a novel, deep learning-based method for extracting mentions of social groups from political texts that has received the **_PolMeth Europe Best Poster Award for Innovative Data Science_** in 2022.
-And in a recent paper forthcoming in the **_Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing_** (EMNLP), my co-authors and I develop and evaluate LLMs in the measurement of scalar socail science constructs, like the negativity of a campaign ad, the level of arousal in a political speech, the intensity of fear and anger expressed in open-ended survy responses.
+And in a recent [paper](http://arxiv.org/abs/2509.03116) forthcoming in the **_Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing_** (EMNLP), my co-authors and I develop and evaluate LLMs in the measurement of scalar socail science constructs, like the negativity of a campaign ad, the level of arousal in a political speech, the intensity of fear and anger expressed in open-ended survy responses.
 <!-- In my dissertation, I have examined how the increasing volume, variety, and granularity of political text collections can be harnessed to study party competition across countries and languages. -->
 
 I'm particularly interested in the role of **rhetorical strategies** in democratic representation, electoral competition, and legislative politics.

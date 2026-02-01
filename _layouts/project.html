@@ -8,6 +8,95 @@ layout: compress
 <!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
 <head>
     {% include head.html %}
+    <style>
+        .project-metadata {
+            background-color: #f5f5f5;
+            border-left: 4px solid #6109b2;
+            padding: 0;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .metadata-toggle {
+            cursor: pointer;
+            padding: 15px 20px;
+            user-select: none;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .metadata-toggle::-webkit-details-marker {
+            display: none;
+        }
+        .metadata-toggle::before {
+            content: '▶';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+        details[open] .metadata-toggle::before {
+            transform: rotate(90deg);
+        }
+        .metadata-content {
+            padding: 0 20px 20px 20px;
+        }
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .metadata-item {
+            padding: 10px;
+            background: white;
+            border-radius: 3px;
+        }
+        .metadata-label {
+            font-weight: 600;
+            color: #666;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .metadata-value {
+            color: #333;
+            font-size: 1em;
+        }
+        .collaborator-list {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0 0 0;
+        }
+        .collaborator-list li {
+            margin-bottom: 5px;
+        }
+        .keywords-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        .keyword-tag {
+            background-color: #e0e0e0;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            color: #555;
+        }
+        .project-acronym {
+            /* color: #6109b2; */
+            font-weight: 700;
+        }
+        .project-collaborators {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #666;
+        }
+        .project-collaborators strong {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     {% include nav.html %}
@@ -16,29 +105,111 @@ layout: compress
         <div class="wrapper animated fadeIn">
             <div class="content">
                 <div class="post-title">
-                    <h1>{{ page.title }}</h1>
-                    <a class="btn zoombtn" href="{{site.url}}">
-                        <i class="fa fa-home"></i>
-                    </a>
+                    {% if page.acronym %}<h1><span class="project-acronym">{{ page.acronym }}</span></h1>{% endif %}
+                    {% if page.title %}<h2>{{page.title}}</h2>{% endif %}
+                    {% if page.collaborators %}
+                    <div class="project-collaborators">
+                        {% for collab in page.collaborators %}
+                            {% if forloop.first %}with {% endif %}<strong>{{ collab.name }}</strong>{% if collab.affiliation %} ({{ collab.affiliation }}){% endif %}{% unless forloop.last %}{% if forloop.index == page.collaborators.size | minus: 1 %} and {% else %}, {% endif %}{% endunless %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
-                <div class="post-list">
-                    {% for post in site.posts %} 
-                        {% if post.project %}
-                    <ul>
-                        <li class="wow fadeInLeft" data-wow-duration="1s">
-                            <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                            <p>{{ post.excerpt }}</p>
-                            <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
-                        </li>
-                    </ul>
-                      {% endif %}
-                    {% endfor %}
+                
+                {% if page.funder or page.duration or page.amount or page.collaborators %}
+                <details class="project-metadata">
+                    <summary class="metadata-toggle">Project Information</summary>
+                    <div class="metadata-content">
+                        <div class="metadata-grid">
+                        {% if page.funder %}
+                        <div class="metadata-item" style="grid-column: 1 / -1;">
+                            <div class="metadata-label">Funding</div>
+                            <div class="metadata-value">{{ page.funder }}</div>
+                            {% if page.scheme %}
+                            <div style="font-size: 0.9em; color: #888; margin-top: 3px;">
+                                {{ page.scheme }}{% if page.doi %} <a href="https://doi.org/{{ page.doi }}" target="_blank" title="DOI: {{ page.doi }}"><i class="fa fa-external-link" style="font-size: 0.85em; color: #D24D57;"></i></a>{% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        
+                        {% if page.start or page.duration %}
+                        <div class="metadata-item">
+                            <div class="metadata-label">Duration</div>
+                            <div class="metadata-value">
+                                {% if page.duration %}{{ page.duration }}{% endif %}
+                                {% if page.start and page.duration %} {% endif %}{% if page.start %}<small style="color: #888;">({{ page.start }}{% if page.end %} - {{ page.end }}{% endif %})</small>{% endif %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                        {% if page.amount %}
+                        <div class="metadata-item">
+                            <div class="metadata-label">Budget</div>
+                            <div class="metadata-value">{{ page.amount }}</div>
+                        </div>
+                        {% endif %}
+                        
+                        <!-- {% if page.collaborators %}
+                        <div class="metadata-item" style="grid-column: 1 / -1;">
+                            <div class="metadata-label">Collaborators</div>
+                            <ul class="collaborator-list">
+                            {% for collab in page.collaborators %}
+                                <li>
+                                    <strong>{{ collab.name }}</strong>
+                                    {% if collab.affiliation %}<span style="color: #888;"> ({{ collab.affiliation }})</span>{% endif %}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %} -->
+                        
+                        {% if page.team %}
+                        <div class="metadata-item" style="grid-column: 1 / -1;">
+                            <div class="metadata-label">Team</div>
+                            <ul class="collaborator-list">
+                            {% for member in page.team %}
+                                <li>
+                                    <strong>{{ member.name }}</strong>
+                                    {% if member.link %} <a href="{{ member.link }}" target="_blank" title="Visit {{ member.name }}'s website"><i class="fa fa-external-link" style="font-size: 0.85em; color: #D24D57;"></i></a>{% endif %}
+                                    {% if member.role %}&mdash; <em>{{ member.role }}</em>{% endif %}
+                                    {% if member.affiliation %}<span style="color: #888;"> ({{ member.affiliation }})</span>{% endif %}
+                                    {% if member.start %}<sub><span style="color: #999; font-size: 0.9em;"> starting {{ member.start }}</span></sub>{% endif %}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                        
+                        {% if page.keywords %}
+                        <div class="metadata-item" style="grid-column: 1 / -1;">
+                            <div class="metadata-label">Keywords</div>
+                            <div class="keywords-list">
+                            {% for keyword in page.keywords %}
+                                <span class="keyword-tag">{{ keyword }}</span>
+                            {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    </div>
+                </details>
+                {% endif %}
+                
+                <hr/>
+                {{ content }}
+                <div class="entry-meta">
+                {% include meta.html %}
                 </div>
             </div>
         </div>
+        {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
     </header>
     {% include scripts.html %}
-    <script src="{{ site.url }}/assets/js/wow.min.js"></script>
-    <script type="text/javascript">(new WOW).init();</script>
+    {% if site.mathjax == true %}
+        <!-- MathJax -->
+        {% include mathjax.html %}
+        <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% endif %}
 </body>
 </html>

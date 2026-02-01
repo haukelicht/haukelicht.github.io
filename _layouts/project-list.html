@@ -1,0 +1,58 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<head>
+    {% include head.html %}
+    <style>
+        .project-collaborators {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .project-collaborators strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    {% include header.html %}
+    {% include nav.html %}
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="wrapper animated fadeIn">
+            <div class="content">
+                <div class="post-title">
+                    <h1>{{ page.title }}</h1>
+                    <h3>third-party funded research projects</h3>
+                </div>
+                <div class="post-list">
+                    {% for item in site.projects %} 
+                        <ul>
+                            <li class="wow fadeInLeft" data-wow-duration=".75s">
+                                <a class="zoombtn" href="{{ site.url }}{{ item.url }}">{{ item.acronym }} &mdash; {{ item.title }}</a>
+                                {% if item.collaborators %}
+                                <p class="project-collaborators">
+                                    {% for collab in item.collaborators %}
+                                        {% if forloop.first %}with {% endif %}<strong>{{ collab.name }}</strong>{% if collab.affiliation %} ({{ collab.affiliation }}){% endif %}{% unless forloop.last %}{% if forloop.index == item.collaborators.size | minus: 1 %} and {% else %}, {% endif %}{% endunless %}
+                                    {% endfor %}
+                                </p>
+                                {% endif %}
+                                <p>{{ item.excerpt }}</p>
+                                <!-- <a href="{{ site.url }}{{ item.url }}" class="btn zoombtn">Read More</a> -->
+                            </li>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </header>
+    {% include scripts.html %}
+    <script src="{{ site.url }}/assets/js/wow.min.js"></script>
+    <script type="text/javascript">(new WOW).init();</script>
+</body>
+</html>

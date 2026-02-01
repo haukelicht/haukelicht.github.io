@@ -19,13 +19,14 @@ url:                https://haukelicht.github.io
 # Navigation
 include-posts:      true
 include-cv:         true
-include-research:   false
+include-projects:   true
 include-credits:    true
 
 # Header
 header_pages:
 - about/index.md
 - cv/index.md
+- projects/index.md
 - posts/index.md
 - credits/index.md
 
@@ -93,6 +94,12 @@ plugins:
 
 jekyll-mentions:
     base_url: https://github.com
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
 
 # Exclude list
 exclude: ['*.Rmd', README.md, notes.md, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

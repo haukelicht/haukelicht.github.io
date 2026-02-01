@@ -2,6 +2,7 @@ _site/
 _drafts/
 vendor/
 .sass-cache/
+dump/
 .jekyll-metadata
 *.DS_Store
 *.Rproj
@@ -10,3 +11,7 @@ vendor/
 .RData
 .jekyll-cache/
 .ruby-version
+Makefile.DS_Store
+**/.DS_Store
+.DS_Store
+Makefile

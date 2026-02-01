@@ -31,24 +31,27 @@ layout: compress
                     </div>
                     <hr class="hr-line">
                     <div id="affiliation">
-                    	<p style="font-size:1.1rem; font-weight:400">
+                    	<p style="font-size:1.1rem; line-height:1.6">
                             <strong>{{ site.position }}</strong>
                             <br/>
-                            {{ site.department }}
+                            <span style="font-size:1rem; font-weight:300">{{ site.department }}</span>
                             <br/>
                             {{ site.university }}
                         </p>
                     </div>
-                    <p style="font-size:1rem;font-weight:200">
+                    <p style="font-size:1rem; font-weight:200">
                         {{ site.interests }}
                     </p>
                   <hr class="hr-line">
                   <div class="title">
-                         <a class="btn zoombtn" href="{{ site.url }}/about">
-                         About
-                         </a>
-                         <a class="btn zoombtn" href="{{ site.url }}/cv">
+                         <a class="btn zoombtn" href="{{ site.url }}/download/hauke_licht_cv.pdf">
                          CV
+                         </a>
+                         <a class="btn zoombtn" href="{{ site.url }}/publications">
+                         Publications
+                         </a>
+                         <a class="btn zoombtn" href="{{ site.url }}/projects">
+                         Projects
                          </a>
                          <!-- <a class="btn zoombtn" href="{{ site.url }}/research">
                          Research

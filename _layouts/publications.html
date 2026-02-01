@@ -1,0 +1,469 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<head>
+    {% include head.html %}
+    <style>
+        .publication-section {
+            margin-bottom: 40px;
+        }
+        .publication-section h2 {
+            /* border-bottom: 2px solid #978ddd; */
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .publication-entry {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border-left: 3px solid #978ddd;
+        }
+        .publication-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            text-align: left;
+        }
+        .publication-title i.fa-file-text {
+            color: #533fea;
+            margin-right: 8px;
+        }
+        .publication-meta {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .publication-meta .journal {
+            font-weight: 600;
+            font-style: italic;
+        }
+        .year-group {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+            align-items: start;
+        }
+        .year-label {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #533fea;
+            text-align: right;
+            padding-top: 20px;
+            position: sticky;
+            top: 20px;
+        }
+        .year-publications {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        @media (max-width: 768px) {
+            .year-group {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            .year-label {
+                text-align: left;
+                padding-top: 0;
+                position: static;
+                margin-bottom: 10px;
+            }
+        }
+        .publication-authors {
+            color: #555;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+        .abstract-section {
+            /* margin-top: 5px; */
+            margin-bottom: 15px;
+        }
+        .abstract-toggle {
+            cursor: pointer;
+            color: #533fea;
+            font-size: 0.9em;
+            font-weight: 400;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            user-select: none;
+            /* transition: color 0.5s ease, font-weight 0.5s ease; */
+        }
+        .abstract-toggle:hover {
+            color: #4a0789;
+            font-weight: 600;
+        }
+        .abstract-toggle::before {
+            content: 'show abstract';
+        }
+        details[open] .abstract-toggle {
+            font-weight: 700;
+            color: #333;
+        }
+        details[open] .abstract-toggle::before {
+            content: 'Abstract';
+        }
+        .abstract-content {
+            margin-top: 10px;
+            padding: 15px 18px;
+            background-color: #ffffff;
+            border-left: 3px solid #e0e0e0;
+            border-radius: 0 4px 4px 0;
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.93em;
+            text-align: justify;
+        }
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+            align-items: center;
+        }
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            color: #533fea;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.2s;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .pub-link:hover {
+            background-color: #533fea;
+            color: white;
+            border-color: #533fea;
+        }
+        .pub-link.bibtex-copy.copied {
+            background-color: #2e7d32;
+            color: white;
+            border-color: #2e7d32;
+        }
+        .pub-link i {
+            margin-right: 5px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            margin: 0;
+            font-size: 0.85em;
+            font-weight: 600;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+        .status-badge[data-status="conditionally-accepted"] {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #66bb6a;
+        }
+        .status-badge[data-status="revise-and-resubmit"] {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            border: 1px solid #64b5f6;
+        }
+        .status-badge[data-status="under-review"] {
+            background-color: #fce4ec;
+            color: #8e1eb7;
+            border: 1px solid #b966d7;
+        }
+        .status-badge[data-status="stale"] {
+            background-color: #f5f5f5;
+            color: #757575;
+            border: 1px solid #bdbdbd;
+        }
+        .bibtex-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .bibtex-modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .bibtex-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .bibtex-modal-header h3 {
+            margin: 0;
+            color: #533fea;
+        }
+        .bibtex-close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            line-height: 1;
+        }
+        .bibtex-close:hover {
+            color: #000;
+        }
+        .bibtex-textarea {
+            width: 100%;
+            height: 200px;
+            font-family: monospace;
+            font-size: 0.75em;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    {% include header.html %}
+    {% include nav.html %}
+    <header class="header" role="banner">
+        <div class="wrapper animated fadeIn">
+            <div class="content">
+                <div class="post-title">
+                    <h1>{{ page.title }}</h1>
+                </div>
+                
+                {% if site.data.publications.articles %}
+                <div class="publication-section">
+                    <h2>{{ site.data.publications.articles.title }}</h2>
+                    {% assign articles_by_year = site.data.publications.articles.entries | group_by: "year" | sort: "name" | reverse %}
+                    {% for year_group in articles_by_year %}
+                    <div class="year-group">
+                        <div class="year-label">{{ year_group.name }}</div>
+                        <div class="year-publications">
+                        {% for pub in year_group.items %}
+                        <div class="publication-entry" id="{{ pub.key }}">
+                        <div class="publication-title">
+                            {{ pub.title }}
+                        </div>
+                        <div class="publication-meta">
+                            {% if pub.journal %}<span class="journal">{{ pub.journal }}</span>{% endif %}{% if pub.volume %}, Vol. {{ pub.volume }}{% endif %}{% if pub.number %}({{ pub.number }}){% endif %}{% if pub.pages %}, pp. {{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}.
+                        </div>
+                        {% assign all_authors = pub.authors | where_exp: "item", "item != 'Hauke Licht'" %}
+                        {% if all_authors.size > 0 %}
+                        {% assign second_to_last = all_authors.size | minus: 1 %}
+                        <div class="publication-authors">
+                            with {% for author in all_authors %}{{ author | strip }}{% unless forloop.last %}{% if forloop.index == second_to_last %} and {% else %}, {% endif %}{% endunless %}{% endfor %}
+                        </div>
+                        {% endif %}
+                        
+                        {% if pub.abstract %}
+                        <div class="abstract-section">
+                            <details>
+                                <summary class="abstract-toggle"></summary>
+                                <div class="abstract-content">{{ pub.abstract }}</div>
+                            </details>
+                        </div>
+                        {% endif %}
+                        
+                        {% if pub.links %}
+                        <div class="publication-links">
+                            {% for link in pub.links %}
+                            <a href="{{ link.link }}" class="pub-link" target="_blank">
+                                {% if link.platform == 'PDF' %}
+                                    <i class="fa fa-file-pdf-o"></i>
+                                {% elsif link.platform == 'Dataverse' %}
+                                    <i class="fa fa-database"></i>
+                                {% elsif link.platform == 'Code Ocean' %}
+                                    <i class="fa fa-code"></i>
+                                {% elsif link.platform == 'OSF Pre-Print' %}
+                                    <i class="fa fa-file-text-o"></i>
+                                {% elsif link.platform == 'Twitter' %}
+                                    <i class="fa fa-twitter"></i>
+                                {% elsif link.platform == 'Preprint' %}
+                                    <i class="fa fa-file-o"></i>
+                                {% elsif link.platform == 'Supplementary Materials' %}
+                                    <i class="fa fa-folder-open"></i>
+                                {% elsif link.platform == 'Replication code and data' %}
+                                    <i class="fa fa-github"></i>
+                                {% elsif link.platform == 'Publisher' %}
+                                    <i class="fa fa-external-link"></i>
+                                {% elsif link.platform == 'Code' %}
+                                    <i class="fa fa-code"></i>
+                                {% elsif link.platform == 'Pre-Print' %}
+                                    <i class="fa fa-file-text-o"></i>
+                                {% elsif link.platform == 'ACL Anthology' %}
+                                    <i class="fa fa-book"></i>
+                                {% else %}
+                                    <i class="fa fa-external-link"></i>
+                                {% endif %}
+                                {{ link.platform }}
+                            </a>
+                            {% endfor %}
+                            {% if pub.doi %}
+                            <a href="https://doi.org/{{ pub.doi }}" class="pub-link" target="_blank">
+                                <i class="fa fa-external-link"></i>DOI
+                            </a>
+                            {% endif %}
+                            {% if pub.bibtex %}
+                            <button class="pub-link bibtex-copy" data-key="{{ pub.key }}">
+                                <i class="fa fa-book"></i>BibTeX
+                            </button>
+                            <pre class="bibtex-data" data-key="{{ pub.key }}" style="display:none;">{{ pub.bibtex }}</pre>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                {% if site.data.publications.working-papers and site.data.publications.working-papers.entries %}
+                <div class="publication-section">
+                    <h2>{{ site.data.publications.working-papers.title }}</h2>
+                    {% assign working_papers_by_year = site.data.publications.working-papers.entries | group_by: "year" | sort: "name" | reverse %}
+                    {% for year_group in working_papers_by_year %}
+                    <div class="year-group">
+                        <div class="year-label">{{ year_group.name }}</div>
+                        <div class="year-publications">
+                        {% for pub in year_group.items %}
+                        <div class="publication-entry" id="{{ pub.key }}">
+                        <div class="publication-title">
+                            {{ pub.title }}
+                        </div>
+                        {% assign all_authors = pub.authors | where_exp: "item", "item != 'Hauke Licht'" %}
+                        {% if all_authors.size > 0 %}
+                        {% assign second_to_last = all_authors.size | minus: 1 %}
+                        <div class="publication-authors">
+                            with {% for author in all_authors %}{{ author | strip }}{% unless forloop.last %}{% if forloop.index == second_to_last %} and {% else %}, {% endif %}{% endunless %}{% endfor %}
+                        </div>
+                        {% endif %}
+                        
+                        {% if pub.abstract %}
+                        <div class="abstract-section">
+                            <details>
+                                <summary class="abstract-toggle"></summary>
+                                <div class="abstract-content">{{ pub.abstract }}</div>
+                            </details>
+                        </div>
+                        {% endif %}
+                        
+                        {% if pub.links or pub.status %}
+                        <div class="publication-links">
+                            {% if pub.status %}
+                            <span class="status-badge" data-status="{{ pub.status }}">{{ pub.status | replace: "-", " " }}</span>
+                            {% endif %}
+                            {% for link in pub.links %}
+                            <a href="{{ link.link }}" class="pub-link" target="_blank">
+                                {% if link.platform == 'PDF' %}
+                                    <i class="fa fa-file-pdf-o"></i>
+                                {% elsif link.platform == 'Dataverse' %}
+                                    <i class="fa fa-database"></i>
+                                {% elsif link.platform == 'Code Ocean' %}
+                                    <i class="fa fa-code"></i>
+                                {% elsif link.platform == 'OSF Pre-Print' %}
+                                    <i class="fa fa-file-text-o"></i>
+                                {% elsif link.platform == 'Twitter' %}
+                                    <i class="fa fa-twitter"></i>
+                                {% elsif link.platform == 'Preprint' %}
+                                    <i class="fa fa-file-o"></i>
+                                {% elsif link.platform == 'Publisher' %}
+                                    <i class="fa fa-external-link"></i>
+                                {% elsif link.platform == 'Code' %}
+                                    <i class="fa fa-code"></i>
+                                {% elsif link.platform == 'Pre-Print' %}
+                                    <i class="fa fa-file-text-o"></i>
+                                {% elsif link.platform == 'ACL Anthology' %}
+                                    <i class="fa fa-book"></i>
+                                {% else %}
+                                    <i class="fa fa-external-link"></i>
+                                {% endif %}
+                                {{ link.platform }}
+                            </a>
+                            {% endfor %}
+                            {% if pub.bibtex %}
+                            <button class="pub-link bibtex-copy" data-key="{{ pub.key }}">
+                                <i class="fa fa-book"></i>BibTeX
+                            </button>
+                            <pre class="bibtex-data" data-key="{{ pub.key }}" style="display:none;">{{ pub.bibtex }}</pre>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                {{ content }}
+            </div>
+        </div>
+    </header>
+    
+    <div id="bibtexModal" class="bibtex-modal">
+        <div class="bibtex-modal-content">
+            <div class="bibtex-modal-header">
+                <h3>BibTeX Citation</h3>
+                <button class="bibtex-close">&times;</button>
+            </div>
+            <textarea id="bibtexText" class="bibtex-textarea" readonly></textarea>
+        </div>
+    </div>
+    
+    {% include scripts.html %}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById('bibtexModal');
+        var textarea = document.getElementById('bibtexText');
+        var closeBtn = document.querySelector('.bibtex-close');
+        
+        document.querySelectorAll('.bibtex-copy').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var key = this.getAttribute('data-key');
+                var preElement = document.querySelector('.bibtex-data[data-key="' + key + '"]');
+                var bibtex = preElement ? preElement.textContent : '';
+                
+                if (bibtex) {
+                    textarea.value = bibtex;
+                    modal.style.display = 'block';
+                    textarea.select();
+                }
+            });
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

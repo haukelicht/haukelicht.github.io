@@ -110,9 +110,10 @@ layout: compress
                     {% if page.acronym %}<h1><span class="project-acronym">{{ page.acronym }}</span></h1>{% endif %}
                     {% if page.title %}<h2>{{page.title}}</h2>{% endif %}
                     {% if page.collaborators %}
+                    {% assign second_to_last = page.collaborators.size | minus: 1 %}
                     <div class="project-collaborators">
                         {% for collab in page.collaborators %}
-                            {% if forloop.first %}with {% endif %}<strong>{{ collab.name }}</strong>{% if collab.affiliation %} ({{ collab.affiliation }}){% endif %}{% unless forloop.last %}{% if forloop.index == page.collaborators.size | minus: 1 %} and {% else %}, {% endif %}{% endunless %}
+                            {% if forloop.first %}with {% endif %}<strong>{{ collab.name }}</strong>{% if collab.affiliation %} ({{ collab.affiliation }}){% endif %}{% unless forloop.last %}{% if forloop.index == second_to_last %} and {% else %}, {% endif %}{% endunless %}
                         {% endfor %}
                     </div>
                     {% endif %}

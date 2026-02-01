@@ -6,7 +6,9 @@ tags: [CV]
 comments: false
 ---
 
-I am an Assistant Professor of Computational Political Science at the University of Innsbruck.
+I'm an Assistant Professor of Computational Political Science at the [University of Innsbruck](https://www.uibk.ac.at/en/ "University of Innsbruck"), where I'm adffiliated with the 
+[Department of Political Science](https://www.uibk.ac.at/en/political-science/ "Department of Political Science, University of Innsbruck") and the [Digital Science Center (DiSC)](https://www.uibk.ac.at/en/disc/ "Digital Science Center, University of Innsbruck").
+
 Previously, I worked as a post-doctoral researcher at the [Cologne Center for Comparative Politics of the University of Cologne](https://cccp.uni-koeln.de/ "Cologne Center for Comparative Politics") in Professor Sven-Oliver Proksch's ERC-funded project [MINORTIYRULE](https://cordis.europa.eu/project/id/101002115/en "ERC: 'Democracy without Majorities: Political Representation under Minority Rule'") (01/2022-07/2024).
 I earned my PhD at the [Department of Political Science of the University of Zurich](https://www.ipz.uzh.ch/en.html), where I was a member of Tarik Abou-Chadi's research group (05/2018 - 12/2021).
 As a PhD and post-doctoral researcher, I visited the [Hertie School's *Data Science Lab*](https://www.hertie-school.org/en/datasciencelab "Hertie School: Data Science Lab") in Berlin and the [Law, Economics, and Data Science group](https://lawecondata.ethz.ch/) at the ETH Zurich.

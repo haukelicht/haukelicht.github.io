@@ -4,7 +4,7 @@ position:           'Assistant Professor of Computational Political Science'
 department:         'Department of Political Science and Digital Science Center'
 university:         'University of Innsbruck'
 # bio:                '<b>Assistant Professor of Computational Political Science</b><br/><em>University of Innsbruck</em>'
-interests:          'computational social science, NLP, multilingual text analysis, political communication, and comparative politics'
+interests:          'computational&nbsp;social&nbsp;science · NLP · multilingual&nbsp;text&nbsp;analysis · political&nbsp;communication · comparative&nbsp;politics'
 description:        "Hi! I'm an Assistant Professor of Computational Political Science at the University of Innsbruck" 
 reading_time:       false
 # words_per_minute:   200
@@ -26,6 +26,7 @@ include-credits:    true
 header_pages:
 - about/index.md
 - cv/index.md
+- publications/index.md
 - projects/index.md
 - posts/index.md
 - credits/index.md

@@ -19,7 +19,7 @@ team:
     role: Postdoctoral Researcher
     link: https://www.sciencespo.fr/centre-etudes-europeennes/en/directory/sattelmayer-luis/
     start: April 2026
-  - name: Larissa Hengst
+  - name: Larissa Henkst
     affiliation: University of Mannheim
     role: PhD Candidate
   - name: Niels Kissel

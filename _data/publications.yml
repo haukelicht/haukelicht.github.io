@@ -201,6 +201,37 @@ working-papers:
   title: Working Papers
   entries:
 
+    - key: licht_attributes_2026
+      title: "Attributes, Abstractions, and Intersectionality: A New Taxonomy for Studying How Parties Invoke Social Groups"
+      year: 2026
+      authors:
+        - Hauke Licht
+        - Leonce Röth
+      status: submitted
+      journal: OSF preprint
+      volume:
+      number:
+      pages:
+      doi:
+      links:
+        - platform: Pre-Print
+          link: https://osf.io/g7htx/files/3qdzc
+      abstract: >-
+        Research increasingly examines which social groups political actors refer to.
+        Yet, existing approaches typically inherit classifications shaped by demand-side perspectives or conflate how groups are defined with how they are framed.
+        We propose a novel, attribute-centered taxonomy of social group references that classifies groups by the attributes political actors invoke, organizes these attributes along nested levels of abstraction, and captures intersectionality when multiple attributes are combined within a single reference.
+        To demonstrate the analytical value of our taxonomy, we collect original annotations and develop automated classification methods to quantify the group focus strategies of parties in 36 Western countries over more than 50 years.
+        Our application yields novel insights into the salience and intersectionality patterns of social attributes in party competition, as well as substantive insights into how different party families construct, differentiate, and mobilize social groups.
+        Our taxonomy, data, and pre-trained classifiers contribute new resources to facilitate future research on social group references in political discourse.
+      bibtex: |
+        @misc{licht_attributes_2026,
+          author = {Licht, Hauke and Röth, Leonce},
+          title = {Attributes, abstractions, and intersectionality: A new taxonomy for studying how parties invoke social groups},
+          year = {2026},
+          howpublished = {OSF Preprint},
+          url = {https://osf.io/g7htx/files/3qdzc}
+        }
+    
     - key: licht_multimodal_2026
       title: "Computational Emotion Analysis With Multimodal LLMs: Current Evidence on an Emerging Methodological Opportunity"
       year: 2026
@@ -227,7 +258,7 @@ working-papers:
         Further, mLLMs underperform even in sentiment analysis when using video recordings instead of text transcripts of the same speeches.
         These findings reveal important limitations of current mLLMs for real-world political video analysis and establish a rigorous evaluation framework for tracking future developments.
       bibtex: |
-        @misc{licht_multimodal_2025,
+        @misc{licht_multimodal_2026,
           author = {Licht, Hauke},
           title = {Computational emotion analysis with multimodal LLMs: Current evidence on an emerging methodological opportunity},
           year = {2026},
